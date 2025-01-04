@@ -1,0 +1,87 @@
+main {
+    background-color: white;
+    color:  rgb(15, 20, 25)
+}
+
+.nav a, .pub a {
+    color: rgb(15, 20, 25);
+    text-decoration: none;
+}
+
+.nav > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav > ul > li {
+    padding: 12px;
+}
+
+.nav > ul > li:hover, .pub a:hover {
+    background-color: rgba(15, 25, 20, 0.1);
+    border-radius: 10px;
+}
+
+.profile img {
+    width: 64px;
+}
+
+.profile ul {
+    list-style: none;
+    padding: 0;
+    color: rgb(83, 100, 113);
+}
+
+.profile a {
+    color: rgb(83, 100, 113);
+    text-decoration: none;
+}
+
+.profile ul a:hover {
+    text-decoration: underline;
+}
+
+.profile .number {
+    color: rgb(15, 20, 25);
+    font-weight: bold;
+}
+
+
+.tzeet {
+    padding-top: 12px;
+}
+
+.tzeet:hover {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+
+.tzeet img {
+    width: 15px;
+}
+
+.tzeet .user, .tzeet .date  {
+    color: rgb(83, 100, 113);
+}
+
+.tzeet .actions a{
+    color: rgb(83, 100, 113);
+    padding: 2px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.tzeet .actions .reply-share:hover {
+    background-color: rgba(29, 155, 240, 0.1);
+    color: rgba(29, 155, 240, 1);
+}
+
+.tzeet .actions .retzeet:hover {
+    background-color: rgba(0, 186, 124, 0.1);
+    color:  rgba(0, 186, 124, 1);
+}
+
+.tzeet .actions .like:hover {
+    background-color: rgba(249, 24, 128, 0.1);
+    color:  rgba(249, 24, 128, 1);
+}
