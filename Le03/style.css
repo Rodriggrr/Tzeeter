@@ -341,7 +341,7 @@ main button:hover {
         transform: translateX(0);
     }
     
-    .nav a {
+    .nav span {
         display: none;
     }
 
