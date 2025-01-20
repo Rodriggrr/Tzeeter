@@ -1,0 +1,24 @@
+:root {
+    --bg-color: #1B1D2B; /* Fundo escuro com tom de azul profundo */
+    --font-color: #E4E4E4; /* Texto claro e suave */
+    --border-color: rgba(255, 255, 255, 0.2); /* Borda suave branca */
+    --hover-color: rgba(0, 0, 0, 0.429); /* Hover mais visível */
+    --button-bg-color: #3A3E68; /* Botão com tom roxo azulado */
+    --button-font-color: #F0F0F0; /* Texto do botão em tom claro */
+    --main-link-color: #5D7B9D; /* Links com um tom de azul suave */
+    --index-font-color: #E4E4E4; /* Cor dos textos principais */
+    --search-bar-font-color: #9C9FA8; /* Cor do texto na barra de pesquisa */
+    --search-bar-bg-color: #2A2D44; /* Fundo da barra de pesquisa com tom de cinza azulado */
+}
+
+
+/*
+   DO NOT ERASE THE COMMENT BELOW
+   Only way to change icon color is throught filters. Dont mess with anything else.
+   Logo color with filters (the best i can do for now) 
+   https://isotropic.co/tool/hex-color-to-css-filter/
+   Try to match --font-color
+*/
+.nav img {
+    filter: invert(92%) sepia(24%) saturate(339%) hue-rotate(331deg) brightness(90%) contrast(95%);
+}

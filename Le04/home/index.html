@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link id="dm" rel="stylesheet" href="style-dark.css" disabled>
+    <link id="lm" rel="stylesheet" href="style-light.css">
+    <link rel="stylesheet" href="theme-lever.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Tzeeter</title>
+</head>
+<body style="display: none;">
+    <main>
+        <aside class="nav show">
+            <a href=""><img src="../img/tiziu.png"> </a>
+            <ul>
+                <li> <a href=""><i class="bi bi-house">       </i> <span>Home         </span> </a> </li>
+                <li> <a href=""><i class="bi bi-hash">        </i> <span>Explore      </span> </a> </li>
+                <li> <a href=""><i class="bi bi-bell">        </i> <span>Notifications</span> </a> </li>
+                <li> <a href=""><i class="bi bi-envelope">    </i> <span>Messages     </span> </a> </li>
+                <li> <a href=""><i class="bi bi-person-fill"> </i> <span>Profile      </span> </a> </li>
+                <li> <a href=""><i class="bi bi-three-dots">  </i> <span>More         </span> </a> </li>        
+            </ul>
+            <button> <i class="bi bi-chat"></i> <span>Tzeet</span> </button>
+            <label class="lever">
+                <input type="checkbox" id="toggle"/>
+                <label class="track" for="toggle">
+                    <i class="bi bi-moon-stars-fill"></i>
+                    <span class="circle dark" ></span>
+                    <i class="bi bi-brightness-low-fill"></i>
+                </label>
+            </label>
+        </aside>
+    </main>
+
+    <script>
+        const toggle = document.getElementById('toggle');
+        const lm = document.getElementById('lm');
+        const dm = document.getElementById('dm');
+    
+        // Função para alternar os temas
+        function toggleTheme() {
+            if (toggle.checked) {
+                lm.disabled = true;
+                dm.disabled = false;
+            } else {
+                lm.disabled = false;
+                dm.disabled = true;
+            }
+        }
+    
+        // Executar ao carregar a página
+        toggleTheme();
+    
+        // Adicionar evento ao checkbox
+        toggle.addEventListener('change', toggleTheme);
+    </script>
+</body>

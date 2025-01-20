@@ -1,0 +1,402 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    background-color: var(--bg-color);
+}
+
+main {
+    min-width: 768px;
+    width: 70%;
+    height: 100%;
+    font-family: 'Segoe UI';
+    display: flex;
+    background-color: var(--bg-color);
+    overflow: hidden;
+}
+
+main button {
+    background-color: var(--button-bg-color);
+    color: var(--button-font-color);
+}
+
+main button:hover {
+    cursor: pointer;
+}
+
+.center {
+    flex-grow: 1;
+    padding-top: 5px;;
+}
+
+.nav {
+    padding: 10px;
+    width: 150px;
+    min-width: 150px;
+    height: 100vh;
+    border-right: var(--border-color) 2px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav > a {
+    width: fit-content;
+    padding-bottom: 20px;
+}
+
+.nav img {
+    width: 35px;
+}
+
+.nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-self: flex-start;
+    padding-bottom: 40px;
+}
+
+.nav > ul > li {
+    width: 100%;
+}
+
+.nav > ul > li > a  {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+
+.nav > ul > li > a:hover {
+    background-color: var(--hover-color);
+    border-radius: 15px;
+}
+
+.nav > button {
+    width: 100px;
+    border-style: none;
+    align-self: center;
+    padding: 10px;
+    border-radius: 50px;   
+}
+
+.nav > button > i {
+    display: none;
+}
+
+.nav > ul > li a {
+    color: var(--font-color);
+    text-decoration: none;
+}
+
+.nav > .lever {
+    margin-top: auto;
+    align-self: center;
+    padding-bottom: 50px;
+    transition: transform 0.3s ease, padding 0.3s ease;
+}
+
+.profile {
+    padding: 20px;
+    color: var(--font-color);
+    padding-top: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;  
+}
+
+.profile a {
+    text-decoration: none;
+    color: var(--main-link-color);
+}
+
+.profile .username {
+    font-weight: 600;
+}
+
+.profile img {
+    width: 128px;
+}
+
+.profile > .row-container {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+}
+
+.profile > .row-container button {
+    align-self: flex-end;
+    width: 100px;
+    border-style: none;
+    padding: 10px;
+    border-radius: 50px;
+}    
+
+.profile > .info {
+    color: var(--main-link-color);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.profile > .info > li {
+    display: inline;
+    padding: 5px;
+}
+
+.profile > .follow .number {
+    font-weight: bold;
+    color: var(--font-color);
+}
+
+.center > .tzeets {
+    height: 100%;
+    color: var(--font-color);
+}
+
+.center > .tzeets > .index {
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: var(--border-color) 2px solid;
+}
+
+.center > .tzeets > .index a{
+    width: 25%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--index-font-color);
+}
+
+.center > .tzeets > .index a:not(:first-child) {
+    border-left: var(--border-color) 2px solid;
+}
+
+.center > .tzeets > .index a:hover {
+    background-color: var(--hover-color) ;
+}
+
+.tzeet {
+    padding: 12px;
+    border-bottom: var(--border-color) 2px solid;
+
+}
+
+.tzeet header {
+    background-color: bl;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.tzeet:hover {
+    background-color: var(--hover-color);
+}
+
+
+.tzeet img {
+    width: 25px;
+}
+
+.tzeet .user, .tzeet .date  {
+    color: var(--main-link-color);
+}
+
+.tzeet > .text {
+    padding-bottom: 15px;
+}
+
+.tzeet .actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.tzeet .actions a{
+    color: var(--main-link-color);
+    padding: 4px;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.tzeet .actions .reply-share:hover {
+    color: rgba(29, 155, 240, 1);
+}
+
+.tzeet .actions .retzeet:hover {
+    color:  rgba(0, 186, 124, 1);
+}
+
+.tzeet .actions .like:hover {
+    color:  rgba(249, 24, 128, 1);
+}
+
+.others {
+    padding: 10px;
+    min-width: 190px;
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+    border-left: var(--border-color) 2px solid;    
+}
+
+.others > .search {
+    padding: 3px;
+    border-radius: 25px;
+    color:  var(--search-bar-font-color);
+    height: 30px;
+    background-color: var(--search-bar-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+}
+
+.others > .search > input {
+    display: inline;
+    max-width: 80%;
+    text-decoration: none;
+    border: none;
+    color: var(--font-color);
+    background-color: transparent;
+}
+
+.others > .search > input:focus {
+    border: none;
+    outline: none;
+}
+
+
+
+.others > .container {
+    display: flex;
+    flex-direction: column;
+    color: var(--font-color);
+    gap: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    background-color:  var(--search-bar-bg-color);
+}
+
+.others > .container a {
+    color: var(--button-bg-color);
+}
+
+.others > .container > .person {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;  
+}
+
+.others > .container > .person img {
+    width: 42px;
+}
+
+.others > .container > .person a {
+    font-weight: bold;
+    color: var(--button-bg-color);
+}
+
+.others > .container > .person button {
+    border: none;
+    padding: 7px;
+    border-radius: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    @keyframes mover {
+        0% {
+            transform: translateX(-60%); /* Posição inicial */
+        }
+        100% {
+            align-self: center; /* Posição final */
+        }
+    }
+    
+    main {
+        min-width: 0px;
+        width: 100%;
+        height: 100%;
+    }
+
+
+    .profile > .info  {
+        font-size: 14px;
+    }
+
+    .nav {
+        transition: width 0.5s ease-in-out;
+        width: 30px;
+        min-width: 30px;
+    }
+
+    .nav.show {
+        transform: translateX(0);
+    }
+    
+    .nav > ul span {
+        display: none;
+    }
+
+    .nav > ul {
+        animation: mover 0.2s ease-in-out;
+        align-self: center;
+    }
+
+    .nav > ul > li {
+        width: auto;
+    }
+
+    .nav > button {
+        transition: width 0.5s ease-in-out;
+        width: 35px;
+    }
+
+    .nav > button > i {
+        display: block;
+    }
+
+    .nav > button > span {
+        display: none;
+    }
+
+    .nav > img {
+        animation: mover 0.2s ease-in-out;
+        align-self: center;
+    }
+
+    .nav > .lever {
+        padding-bottom: 0px;
+        transform: rotate(-90deg);
+        padding-left: 80px;
+    }
+
+    .tzeet {
+        font-size: 14px;
+    }
+
+    .center > .tzeets > .index {
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .others {
+        display: none;
+    }
+}

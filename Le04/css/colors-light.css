@@ -1,0 +1,24 @@
+:root {
+    --bg-color: white;
+    --font-color: black;
+    --border-color: rgba(100, 100, 100, 0.15);
+    --hover-color: rgba(100, 100, 100, 0.1);
+    --button-bg-color: rgba(0, 0, 255, 0.6);
+    --button-font-color: white;
+    --main-link-color: rgba(100, 100, 100, 0.8);
+    --index-font-color: rgba(100, 100, 100, 1);
+    --search-bar-font-color: rgba(100, 100, 100, 0.8);
+    --search-bar-bg-color: var(--hover-color);
+}
+
+
+/*
+   DO NOT ERASE THE COMMENT BELOW
+   Only way to change icon color is throught filters. Dont mess with anything else.
+   Logo color with filters (the best i can do for now) 
+   https://isotropic.co/tool/hex-color-to-css-filter/
+   Try to match --font-color
+*/
+.nav img {
+    filter: invert(0%) sepia(4%) saturate(7500%) hue-rotate(223deg) brightness(92%) contrast(103%);
+}
