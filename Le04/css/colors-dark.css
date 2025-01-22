@@ -2,13 +2,18 @@
     --bg-color: #1B1D2B; /* Fundo escuro com tom de azul profundo */
     --font-color: #E4E4E4; /* Texto claro e suave */
     --border-color: rgba(255, 255, 255, 0.2); /* Borda suave branca */
-    --hover-color: rgba(0, 0, 0, 0.429); /* Hover mais visível */
-    --button-bg-color: #3A3E68; /* Botão com tom roxo azulado */
+    --hover-color: rgba(9, 13, 25, 0.692); /* Hover mais visível */
+    --button-bg-color: #555989; /* Botão com tom roxo azulado */
     --button-font-color: #F0F0F0; /* Texto do botão em tom claro */
     --main-link-color: #5D7B9D; /* Links com um tom de azul suave */
     --index-font-color: #E4E4E4; /* Cor dos textos principais */
     --search-bar-font-color: #9C9FA8; /* Cor do texto na barra de pesquisa */
     --search-bar-bg-color: #2A2D44; /* Fundo da barra de pesquisa com tom de cinza azulado */
+    
+    /* Cores do Scrollbar */
+    --scrollbar-track-color: #2A2D44; /* Cor de fundo do trilho, combinando com o fundo da pesquisa */
+    --scrollbar-thumb-color: #555989; /* Cor do polegar, usando o mesmo tom roxo azulado do botão */
+    --scrollbar-thumb-hover-color: #6A7B9E; /* Tom mais claro e suave do roxo azulado, para o hover */
 }
 
 

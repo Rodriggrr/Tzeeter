@@ -9,8 +9,11 @@
     --index-font-color: rgba(100, 100, 100, 1);
     --search-bar-font-color: rgba(100, 100, 100, 0.8);
     --search-bar-bg-color: var(--hover-color);
-}
 
+    --scrollbar-track-color: #f0f0f0;  /* Um tom de cinza muito claro para o trilho */
+    --scrollbar-thumb-color: #888888;  /* Cinza médio para o polegar */
+    --scrollbar-thumb-hover-color: #555555;  /* Um cinza mais escuro para o efeito hover */
+}
 
 /*
    DO NOT ERASE THE COMMENT BELOW
