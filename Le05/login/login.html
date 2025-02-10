@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style-common.css">
+    <link rel="stylesheet" href="../css/theme-lever.css">
+    <link rel="stylesheet" href="../css/colors-light.css" id="lm">
+    <link rel="stylesheet" href="../css/colors-dark.css"  id="dm" disabled>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Tzeeter Login</title>
+</head>
+<body>
+    
+    <main>
+        <a href=""><img src="../img/tiziu_1.svg"> </a>
+        <form action="">
+            <div>
+                <span>Entre no Tzeeter agora mesmo!</span>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Senha" minlength=8 required>
+                <a href="">Esqueceu a senha?</a>
+            </div>
+            <div>
+                <button>Entrar</button>
+                <span>Não tem uma conta? <a href="../signup/signup.html">Inscreva-se!</a></span>
+            </div>
+        </form>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            let email = document.querySelector('input[type="email"]');
+            let password = document.querySelector('input[type="password"]');
+            function changeButtonColor() {
+                
+                let button = document.querySelector('button');
+                button.style.backgroundColor = 'gray';
+
+                if(email.validity.valid && password.validity.valid) {
+                    button.style.backgroundColor = 'blue';
+                    button.style.cursor = 'pointer';
+                } else {
+                    button.style.backgroundColor = 'gray';
+                    button.style.cursor = 'not-allowed';
+                }
+            }
+            email.addEventListener('input', changeButtonColor);
+            password.addEventListener('input', changeButtonColor);
+        });
+    </script>
+</body>
+</html>

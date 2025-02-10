@@ -1,0 +1,26 @@
+:root {
+    --bg-color: #0F0F1C; /* Fundo bem escuro, quase preto */
+    --font-color: #E4FF8A; /* Texto neon verde-amarelado */
+    --border-color: rgba(255, 255, 255, 0.2); /* Borda suave branca */
+    --hover-color: rgba(20, 255, 122, 0.292); /* Verde neon translúcido no hover */
+    --button-bg-color: #FF0090; /* Botão com rosa neon vibrante */
+    --button-font-color: #FFFFFF; /* Texto do botão em branco puro */
+    --main-link-color: #14F3FF; /* Links com azul neon brilhante */
+    --index-font-color: #FFFB8A; /* Cor de textos principais em amarelo neon */
+    --search-bar-font-color: #8AFFC1; /* Texto na barra de pesquisa com verde neon claro */
+    --search-bar-bg-color: #191933; /* Fundo da barra de pesquisa com cinza escuro puxado para o roxo */
+    
+    /* Cores do Scrollbar */
+    --scrollbar-track-color: #191933; /* Fundo do trilho em cinza-escuro roxeado */
+    --scrollbar-thumb-color: #FF0090; /* Cor do polegar em rosa neon */
+    --scrollbar-thumb-hover-color: #FF4EBA; /* Rosa neon mais claro no hover */
+}
+
+/*
+   Logo color with filters for neon theme
+   Adjusted to match --font-color
+   https://isotropic.co/tool/hex-color-to-css-filter/
+*/
+.nav img {
+    filter: invert(85%) sepia(94%) saturate(300%) hue-rotate(50deg) brightness(104%) contrast(101%);
+}

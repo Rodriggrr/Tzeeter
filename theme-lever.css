@@ -1,0 +1,116 @@
+:root {
+    /* This design uses boostrap icons.
+    <head>
+        <link rel="stylesheet" href="theme-lever.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    </head>
+
+    <body>
+        <label class="lever">
+            <input type="checkbox" id="toggle"/>
+            <label class="track" for="toggle">
+                <i class="bi bi-moon-stars-fill"></i>
+                <span class="circle dark" ></span>
+                <i class="bi bi-brightness-low-fill"></i>
+            </label>
+        </label>
+    </body>
+    */
+
+    --lever-primary-size: 100px;
+    /* ----------------------------- */
+    --lever-light-background-color:  rgba(78, 78, 78, 0.1);
+    --lever-light-sun-moon-color: rgb(106, 106, 255);
+    --lever-light-circle-color: rgb(106, 106, 255);
+    
+    --lever-dark-background-color: rgb(53, 53, 53);
+    --lever-dark-moon-color: rgb(200, 200, 200);
+    --lever-dark-circle-color: rgb(200, 200, 200);
+    /* ----------------------------- */
+    --lever-height: calc(var(--lever-primary-size) / 2);
+    --track-border-radius: calc(var(--lever-primary-size) / 3);
+    --track-border-padding: calc(var(--lever-primary-size) / 30);
+    /* ----------------------------- */
+    --moon-size: calc(var(--lever-primary-size) / 3.33);
+    --moon-padding-left: calc(var(--lever-primary-size) / 10);
+    --moon-padding-bottom: calc(var(--track-border-padding) / 2);
+
+    --sun-size: calc(var(--lever-primary-size) / 2.5);
+    --sun-padding-left: calc(var(--moon-padding-left) / 2);
+    --sun-padding-bottom: var(--track-border-padding);
+    /* ----------------------------- */
+    --circle-size: calc(var(--lever-primary-size) / 2.30);
+    --circle-margin: calc(var(--sun-size) * -1);
+    --circle-translate-distance: var(--lever-height);
+}
+
+.lever {
+    width: var(--lever-primary-size);
+    height: var(--lever-height);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lever .track {
+    background-color: var(--lever-light-background-color);
+    width: 100%;
+    height: 100%;
+    border-radius: var(--track-border-radius);
+    display: flex;
+    align-items: center;
+    padding: 0 var(--track-border-padding);
+    box-sizing: border-box;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px inset rgba(100, 100, 100, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.lever .bi {
+    color: var(--lever-light-sun-moon-color);
+    transition: color 0.3s ease;
+}
+
+.lever .bi-moon-stars-fill {
+    font-size: var(--moon-size);
+    padding-left: var(--moon-padding-left);
+    padding-bottom: var(--moon-padding-bottom);
+}
+
+.lever .bi-brightness-low-fill {
+    padding-left: var(--sun-padding-left);
+    padding-bottom: var(--sun-padding-bottom);
+    font-size: var(--sun-size);
+}
+
+.lever #toggle {
+    display: none;
+}
+
+.lever .circle {
+    z-index: 0;
+    width: var(--circle-size);
+    height: var(--circle-size);
+    background-color: var(--lever-light-circle-color);
+    border-radius: 50%;
+    margin-left: var(--circle-margin);
+    box-shadow: 0px 0px 10px rgba(100, 100, 100, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.lever #toggle:checked + .track .circle {
+    transform: translateX(var(--circle-translate-distance));
+    background-color: var(--lever-dark-circle-color);
+}
+
+.lever #toggle:checked + .track {
+    background-color: var(--lever-dark-background-color);
+}
+
+.lever #toggle:checked + .track .bi-moon-stars-fill {
+    color: var(--lever-dark-moon-color);
+}
+
+.lever #toggle:checked + .track .bi-brightness-low-fill {
+    color: var(--lever-dark-background-color);
+}

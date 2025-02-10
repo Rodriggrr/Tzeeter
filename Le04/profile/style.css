@@ -33,17 +33,12 @@ main button:hover {
     cursor: pointer;
 }
 
-.center {
-    flex-grow: 1;
-    padding-top: 5px;;
-}
 
 .nav {
     padding: 10px;
     width: 150px;
     min-width: 150px;
-    height: 100vh;
-    border-right: var(--border-color) 2px solid;
+    max-height: 90%;
     display: flex;
     flex-direction: column;
 }
@@ -97,10 +92,13 @@ main button:hover {
     text-decoration: none;
 }
 
+.nav .search-hidden {
+    display: none;
+}
+
 .nav > .lever {
     margin-top: auto;
     align-self: center;
-    padding-bottom: 50px;
     transition: transform 0.3s ease, padding 0.3s ease;
 }
 
@@ -158,12 +156,49 @@ main button:hover {
     color: var(--font-color);
 }
 
+::-webkit-scrollbar {
+    width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track-color);
+    border-radius: 10px; 
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb-color);
+    border-radius: 10px; 
+    border: 3px solid var(--scrollbar-track-color); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: var(--scrollbar-thumb-hover-color);
+}
+
 .center > .tzeets {
     height: 100%;
     color: var(--font-color);
+    overflow-y: scroll;
 }
 
-.center > .tzeets > .index {
+@-moz-document url-prefix() {
+    .center > .tzeets {
+        scrollbar-width: thin;
+        scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);    
+    }
+}
+
+.center {
+    flex-grow: 1;
+    padding-top: 5px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    border-right: var(--border-color) 2px solid;
+    border-left: var(--border-color) 2px solid;
+}
+
+.center > .index {
     display: flex;
     justify-content: space-around;
     align-items:center;
@@ -175,25 +210,26 @@ main button:hover {
     border-bottom: var(--border-color) 2px solid;
 }
 
-.center > .tzeets > .index a{
+.center > .index a{
     width: 25%;
     height: 100%;
     text-decoration: none;
     color: var(--index-font-color);
 }
 
-.center > .tzeets > .index a:not(:first-child) {
+.center > .index a:not(:first-child) {
     border-left: var(--border-color) 2px solid;
 }
 
-.center > .tzeets > .index a:hover {
+.center > .index a:hover {
     background-color: var(--hover-color) ;
 }
+
 
 .tzeet {
     padding: 12px;
     border-bottom: var(--border-color) 2px solid;
-
+    
 }
 
 .tzeet header {
@@ -252,7 +288,6 @@ main button:hover {
     gap: 10px;
     display: flex;
     flex-direction: column;
-    border-left: var(--border-color) 2px solid;    
 }
 
 .others > .search {
@@ -387,11 +422,15 @@ main button:hover {
         padding-left: 80px;
     }
 
+    .nav .search-hidden {
+        display: block;
+    }
+
     .tzeet {
         font-size: 14px;
     }
 
-    .center > .tzeets > .index {
+    .center > .index {
         height: 50px;
         line-height: 50px;
     }
